@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- ICS2O-Unit5-03-HTML -->
+<html lang="en-ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="My first PWA" />
+    <meta name="keywords" content="mths, ics2o" />
+    <meta name="author" content="Venika Sem" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <title>Movie Classification</title>
+    <link rel="canonical" href="https://github.com/venika-sem/ICS2O-Unit5-03-HTML" />
+    <link rel="manifest" href="/ICS2O-Unit5-03-HTML/manifest.webmanifest" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></noscript>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"></noscript>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  </head>
+  <body>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Movie Classification</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <h5>Select your age:</h5>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="seventeenAbove">
+          <input type="radio" id="seventeenAbove" class="mdl-radio__button" name="options" value="1" checked>
+          <span class="mdl-radio__label">Age 17 and above</span>
+        </label>
+        <br>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="thirteenToSixteen">
+          <input type="radio" id="thirteenToSixteen" class="mdl-radio__button" name="options" value="1" checked>
+          <span class="mdl-radio__label">Age 13 - 16</span>
+        </label>
+        <br>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="fiveToTwelve">
+          <input type="radio" id="fiveToTwelve" class="mdl-radio__button" name="options" value="1" checked>
+          <span class="mdl-radio__label">Age 5 - 12</span>
+        </label>
+        <br>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="belowFive">
+          <input type="radio" id="belowFive" class="mdl-radio__button" name="options" value="1" checked>
+          <span class="mdl-radio__label">Below 5</span>
+        </label>
+        <br>
+        <br>
+        <!-- Raised button with ripple -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="myButtonClicked()"
+        >
+          Eligibility
+        </button>
+        <br>
+        <br>
+        <div id="answers"></div>
+      </main>
+    </div>
+  </body>
+</html>
