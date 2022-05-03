@@ -1,5 +1,5 @@
 /* Created by: Venika Sem
- * Created on: Apr 2022
+ * Created on: May 2022
  * This file contains the JS functions for index.html 
 */
 
@@ -9,27 +9,21 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-Unit5-03-HTML/sw.js", {
-    scope: "/ICS2O-Unit5-03-HTML/",
+  navigator.serviceWorker.register("/ICS2O-Unit5-04-HTML/sw.js", {
+    scope: "/ICS2O-Unit5-04-HTML/",
   })
 }
 
 /**
- * This function determines if a person is eligible for movie rates.
+ * Checks if the user is eligible for student pricing for a museum depending on their age and the current day of the week.
  */
 function myButtonClicked() {
-  //input
-  const seventeenAbove = document.getElementById("seventeenAbove").checked
-  const thirteenToSixteen = document.getElementById("thirteenToSixteen").checked
-  const fiveToTwelve = document.getElementById("fiveToTwelve").checked
-  //process
-  if (seventeenAbove == true) {
-    document.getElementById("answers").innerHTML = "You are eligible to watch R rated movies alone."
-  } else if (thirteenToSixteen == true) {
-      document.getElementById("answers").innerHTML = "You are eligible to watch PG 13 rated movies alone."
-  } else if (fiveToTwelve == true) {
-      document.getElementById("answers").innerHTML = "You are eligible to watch G and PG rated movies alone."
+  const age = document.getElementById("age").value
+  const day = document.getElementById("days").value
+
+  if (day == "tuesday" || day == "thursday" || age > 12 && age < 22) {
+    document.getElementById("result").innerHTML = "<h5>You can pay with the museum's student pricing on this day!</h5>"
   } else {
-      document.getElementById("answers").innerHTML = "You are too young to watch any rated movies alone."
+    document.getElementById("result").innerHTML = "<h5>You must pay with the museum's regular pricing on this day!</h5>"
   }
 }
